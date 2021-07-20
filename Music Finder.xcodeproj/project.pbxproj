@@ -28,6 +28,8 @@
 		245A524E26A6CCD6007C30AA /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245A524D26A6CCD6007C30AA /* TrackCell.xib */; };
 		245A525026A6CCFD007C30AA /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A524F26A6CCFD007C30AA /* TrackCell.swift */; };
 		245A525426A6EE1C007C30AA /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A525326A6EE1C007C30AA /* FooterView.swift */; };
+		245A525726A6F523007C30AA /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245A525626A6F523007C30AA /* TrackDetailView.xib */; };
+		245A525926A6F538007C30AA /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A525826A6F538007C30AA /* TrackDetailView.swift */; };
 		7029F75174A8769409461DA0 /* Pods_Music_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F676656C6C91C7D4841E88 /* Pods_Music_Finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		245A524D26A6CCD6007C30AA /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		245A524F26A6CCFD007C30AA /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		245A525326A6EE1C007C30AA /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		245A525626A6F523007C30AA /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
+		245A525826A6F538007C30AA /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
 		4C2F5E6076AC539FC96C6716 /* Pods-Music Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Finder.release.xcconfig"; path = "Target Support Files/Pods-Music Finder/Pods-Music Finder.release.xcconfig"; sourceTree = "<group>"; };
 		86F676656C6C91C7D4841E88 /* Pods_Music_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +115,7 @@
 		245A522926A5CBD4007C30AA /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				245A525526A6F507007C30AA /* TrackDetailView */,
 				245A525226A6EE06007C30AA /* FooterView */,
 				245A524C26A6CCB4007C30AA /* Cell */,
 				245A524726A5D141007C30AA /* SearchViewController.storyboard */,
@@ -165,6 +170,15 @@
 				245A525326A6EE1C007C30AA /* FooterView.swift */,
 			);
 			path = FooterView;
+			sourceTree = "<group>";
+		};
+		245A525526A6F507007C30AA /* TrackDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				245A525626A6F523007C30AA /* TrackDetailView.xib */,
+				245A525826A6F538007C30AA /* TrackDetailView.swift */,
+			);
+			path = TrackDetailView;
 			sourceTree = "<group>";
 		};
 		6257D3531D7602595F98C3EF /* Frameworks */ = {
@@ -243,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245A525726A6F523007C30AA /* TrackDetailView.xib in Resources */,
 				245A521A26A5A1B1007C30AA /* LaunchScreen.storyboard in Resources */,
 				245A524E26A6CCD6007C30AA /* TrackCell.xib in Resources */,
 				245A521726A5A1B1007C30AA /* Assets.xcassets in Resources */,
@@ -315,6 +330,7 @@
 				245A524326A5CCBB007C30AA /* SearchModels.swift in Sources */,
 				245A521026A5A1AF007C30AA /* SceneDelegate.swift in Sources */,
 				245A524026A5CCBB007C30AA /* SearchPresenter.swift in Sources */,
+				245A525926A6F538007C30AA /* TrackDetailView.swift in Sources */,
 				245A522826A5C2A8007C30AA /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
