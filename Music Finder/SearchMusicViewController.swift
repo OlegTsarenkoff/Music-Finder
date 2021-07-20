@@ -13,7 +13,7 @@ struct TrackModel {
     var artistName: String
 }
 
-class SearchMisicViewController: UITableViewController {
+class SearchMusicViewController: UITableViewController {
     
     var networkService = NetworkService()
     private var timer: Timer?
@@ -53,7 +53,7 @@ class SearchMisicViewController: UITableViewController {
     }
 }
 
-extension SearchMisicViewController: UISearchBarDelegate {
+extension SearchMusicViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         timer?.invalidate()
