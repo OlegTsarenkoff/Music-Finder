@@ -30,6 +30,7 @@
 		245A525426A6EE1C007C30AA /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A525326A6EE1C007C30AA /* FooterView.swift */; };
 		245A525726A6F523007C30AA /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245A525626A6F523007C30AA /* TrackDetailView.xib */; };
 		245A525926A6F538007C30AA /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A525826A6F538007C30AA /* TrackDetailView.swift */; };
+		247F01D426A81A6A00EC39E0 /* SMTime + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247F01D326A81A6A00EC39E0 /* SMTime + Extention.swift */; };
 		7029F75174A8769409461DA0 /* Pods_Music_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F676656C6C91C7D4841E88 /* Pods_Music_Finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		245A525326A6EE1C007C30AA /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		245A525626A6F523007C30AA /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
 		245A525826A6F538007C30AA /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
+		247F01D326A81A6A00EC39E0 /* SMTime + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMTime + Extention.swift"; sourceTree = "<group>"; };
 		4C2F5E6076AC539FC96C6716 /* Pods-Music Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Finder.release.xcconfig"; path = "Target Support Files/Pods-Music Finder/Pods-Music Finder.release.xcconfig"; sourceTree = "<group>"; };
 		86F676656C6C91C7D4841E88 /* Pods_Music_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				245A524926A5D5E6007C30AA /* UIViewController + Storyboard.swift */,
+				247F01D326A81A6A00EC39E0 /* SMTime + Extention.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247F01D426A81A6A00EC39E0 /* SMTime + Extention.swift in Sources */,
 				245A522626A5BB31007C30AA /* SearchResponse.swift in Sources */,
 				245A524A26A5D5E6007C30AA /* UIViewController + Storyboard.swift in Sources */,
 				245A522426A5A320007C30AA /* SearchMusicViewController.swift in Sources */,
