@@ -80,18 +80,18 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="5jE-G6-4a4">
-                            <rect key="frame" x="0.0" y="584" width="354" height="169"/>
+                            <rect key="frame" x="0.0" y="584" width="354" height="154"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shm-7v-2Nc">
-                                    <rect key="frame" x="0.0" y="73.5" width="144.5" height="22"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shm-7v-2Nc">
+                                    <rect key="frame" x="0.0" y="67" width="144.5" height="20"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="Back track"/>
                                     <connections>
                                         <action selector="previousTrack:" destination="K6d-Ob-dka" eventType="touchUpInside" id="HeL-lL-RyA"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHg-YR-glw">
-                                    <rect key="frame" x="104.5" y="56" width="145" height="57"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHg-YR-glw">
+                                    <rect key="frame" x="104.5" y="48.5" width="145" height="57"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="Pause">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
@@ -100,44 +100,23 @@
                                         <action selector="playPauseAction:" destination="K6d-Ob-dka" eventType="touchUpInside" id="x11-ow-u4a"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8k-H6-ILQ">
-                                    <rect key="frame" x="209.5" y="73.5" width="144.5" height="22"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8k-H6-ILQ">
+                                    <rect key="frame" x="209.5" y="67" width="144.5" height="20"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" image="Fast forward">
-                                        <color key="titleColor" red="0.90980392160000001" green="0.27058823529999998" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
+                                    <state key="normal" image="Fast forward"/>
                                     <connections>
                                         <action selector="nextTrack:" destination="K6d-Ob-dka" eventType="touchUpInside" id="4j8-fY-xeQ"/>
                                     </connections>
                                 </button>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0b8-dY-Y5I">
-                            <rect key="frame" x="0.0" y="773" width="354" height="15"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon Min" translatesAutoresizingMaskIntoConstraints="NO" id="JYi-ZO-bTu">
-                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="JYi-ZO-bTu" secondAttribute="height" multiplier="1:1" id="egs-BA-3yN"/>
-                                        <constraint firstAttribute="height" constant="15" id="xWB-Bs-B6N"/>
-                                    </constraints>
-                                </imageView>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="whH-9W-vIX">
-                                    <rect key="frame" x="23" y="0.0" width="308" height="16"/>
-                                    <color key="tintColor" systemColor="systemPinkColor"/>
-                                    <connections>
-                                        <action selector="handleVolumeSlider:" destination="K6d-Ob-dka" eventType="valueChanged" id="FLe-Ij-7s4"/>
-                                    </connections>
-                                </slider>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon Max" translatesAutoresizingMaskIntoConstraints="NO" id="mG2-To-fpU">
-                                    <rect key="frame" x="339" y="0.0" width="15" height="15"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="mG2-To-fpU" secondAttribute="height" multiplier="1:1" id="pED-pE-6Wl"/>
-                                        <constraint firstAttribute="height" constant="15" id="r88-ux-ve4"/>
-                                    </constraints>
-                                </imageView>
-                            </subviews>
-                        </stackView>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" minimumValueImage="Icon Min" maximumValueImage="Icon Max" translatesAutoresizingMaskIntoConstraints="NO" id="whH-9W-vIX">
+                            <rect key="frame" x="-2" y="758" width="358" height="31"/>
+                            <color key="tintColor" systemColor="systemPinkColor"/>
+                            <connections>
+                                <action selector="handleVolumeSlider:" destination="K6d-Ob-dka" eventType="valueChanged" id="FLe-Ij-7s4"/>
+                            </connections>
+                        </slider>
                     </subviews>
                 </stackView>
             </subviews>
