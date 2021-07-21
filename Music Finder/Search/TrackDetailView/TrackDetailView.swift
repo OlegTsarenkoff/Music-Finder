@@ -125,7 +125,7 @@ class TrackDetailView: UIView {
     
     @IBAction func dragDownButtonTapped(_ sender: Any) {
         //self.removeFromSuperview()
-        self.tabBarDelegate?.minimizeTrackDetailController()
+        self.tabBarDelegate?.minimiseTrackDetailController()
         
     }
     
