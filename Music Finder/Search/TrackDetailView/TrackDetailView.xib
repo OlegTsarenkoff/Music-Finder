@@ -79,27 +79,29 @@
                                 </stackView>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5jE-G6-4a4">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="5jE-G6-4a4">
                             <rect key="frame" x="0.0" y="584" width="354" height="169"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shm-7v-2Nc">
-                                    <rect key="frame" x="0.0" y="74.5" width="118" height="20"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shm-7v-2Nc">
+                                    <rect key="frame" x="0.0" y="73.5" width="144.5" height="22"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="Back track"/>
                                     <connections>
                                         <action selector="previousTrack:" destination="K6d-Ob-dka" eventType="touchUpInside" id="HeL-lL-RyA"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHg-YR-glw">
-                                    <rect key="frame" x="118" y="66.5" width="118" height="36"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHg-YR-glw">
+                                    <rect key="frame" x="104.5" y="66.5" width="145" height="36"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" image="Pause"/>
+                                    <state key="normal" image="Pause">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                    </state>
                                     <connections>
                                         <action selector="playPauseAction:" destination="K6d-Ob-dka" eventType="touchUpInside" id="x11-ow-u4a"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8k-H6-ILQ">
-                                    <rect key="frame" x="236" y="74.5" width="118" height="20"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8k-H6-ILQ">
+                                    <rect key="frame" x="209.5" y="73.5" width="144.5" height="22"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="Fast forward">
                                         <color key="titleColor" red="0.90980392160000001" green="0.27058823529999998" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -141,6 +143,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="udl-m9-wji"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="tintColor" systemColor="systemPinkColor"/>
             <constraints>
                 <constraint firstItem="udl-m9-wji" firstAttribute="bottom" secondItem="SSo-9S-Apz" secondAttribute="bottom" constant="30" id="63B-Re-L6Y"/>
                 <constraint firstItem="SSo-9S-Apz" firstAttribute="top" secondItem="udl-m9-wji" secondAttribute="top" id="HK8-oH-10j"/>
