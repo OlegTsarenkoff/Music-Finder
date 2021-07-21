@@ -26,7 +26,7 @@ class NetworkService {
             let decoder = JSONDecoder()
             do {
                 let objects = try decoder.decode(SearchResponse.self, from: data)
-                print("Objects:", objects)
+                //print("Objects:", objects)
                 completion(objects)
                 
             } catch let jsonError {

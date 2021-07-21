@@ -9,6 +9,11 @@ import UIKit
 import SDWebImage
 import AVKit
 
+protocol TrackMovingDelegate: class {
+    func moveBackForPreviousTrack() -> SearchViewModel.Cell?
+    func moveForwardForPreviousTrack() -> SearchViewModel.Cell?
+}
+
 class TrackDetailView: UIView {
     
     //MARK: - IBOutlets
@@ -30,6 +35,8 @@ class TrackDetailView: UIView {
         avPlayer.automaticallyWaitsToMinimizeStalling = false
         return avPlayer
     }()
+    
+    weak var delegate: TrackMovingDelegate?
     
     //MARK: - awakeFromNib
     
@@ -56,10 +63,11 @@ class TrackDetailView: UIView {
         let string600 = viewModel.iconUrlString?.replacingOccurrences(of: "100x100", with: "600x600")
         guard let url = URL(string: string600 ?? "") else { return }
         trackImageView.sd_setImage(with: url, completed: nil)
+        
+        currentTimeSlider.setThumbImage(#imageLiteral(resourceName: "Knob"), for: .highlighted)
     }
     
     private func playTrack(previewUrl: String?) {
-        print("Пытаюсь вкл трек по ссылке: \(previewUrl ?? "пусто")")
         
         guard let url = URL(string: previewUrl ?? "") else { return }
         let playerItem = AVPlayerItem(url: url)
@@ -128,7 +136,11 @@ class TrackDetailView: UIView {
     }
     
     @IBAction func previousTrack(_ sender: Any) {
+        let cellViewModel = delegate?.moveBackForPreviousTrack()
+        guard let cellInfo = cellViewModel else { return }
+        self.set(viewModel: cellInfo)
     }
+    
     @IBAction func playPauseAction(_ sender: Any) {
         if player.timeControlStatus == .paused {
             player.play()
@@ -140,7 +152,11 @@ class TrackDetailView: UIView {
             reduceTrackImageView()
         }
     }
+    
     @IBAction func nextTrack(_ sender: Any) {
+        let cellViewModel = delegate?.moveForwardForPreviousTrack()
+        guard let cellInfo = cellViewModel else { return }
+        self.set(viewModel: cellInfo)
     }
     
     @IBAction func handleVolumeSlider(_ sender: Any) {
