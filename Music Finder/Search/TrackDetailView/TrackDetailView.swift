@@ -18,8 +18,15 @@ class TrackDetailView: UIView {
     
     //MARK: - IBOutlets
     
+    @IBOutlet weak var miniTrackView: UIView!
+    @IBOutlet weak var miniTrackImage: UIImageView!
+    @IBOutlet weak var miniTrackTitle: UILabel!
+    @IBOutlet weak var miniPlayButton: UIButton!
+    @IBOutlet weak var miniForwardButton: UIButton!
+
+    @IBOutlet weak var maximisedStackView: UIStackView!
+
     @IBOutlet weak var trackImageView: UIImageView!
-    
     @IBOutlet weak var trackTittleLabel: UILabel!
     @IBOutlet weak var artistTitleLabel: UILabel!
     
@@ -47,25 +54,27 @@ class TrackDetailView: UIView {
         let scale: CGFloat = 0.8
         trackImageView.transform = CGAffineTransform(scaleX: scale, y: scale)
         trackImageView.layer.cornerRadius = 10
-        
-        trackImageView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
     }
     
     //MARK: - Setup
     
     func set(viewModel: SearchViewModel.Cell) {
+        miniTrackTitle.text = viewModel.trackName
         trackTittleLabel.text = viewModel.trackName
         artistTitleLabel.text = viewModel.artistName
         playTrack(previewUrl: viewModel.previewUrl)
         monitorStartTime()
         observePlayerCurrentTime()
+        playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+        miniPlayButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+        
         
         let string600 = viewModel.iconUrlString?.replacingOccurrences(of: "100x100", with: "600x600")
         guard let url = URL(string: string600 ?? "") else { return }
         trackImageView.sd_setImage(with: url, completed: nil)
+        miniTrackImage.sd_setImage(with: url, completed: nil)
         
-        currentTimeSlider.setThumbImage(#imageLiteral(resourceName: "Knob"), for: .highlighted)
+        currentTimeSlider.setThumbImage(UIImage(systemName: "circle.fill"), for: .highlighted)
     }
     
     private func playTrack(previewUrl: String?) {
@@ -83,7 +92,7 @@ class TrackDetailView: UIView {
         let times = [NSValue(time: time)]
         player.addBoundaryTimeObserver(forTimes: times, queue: .main) { [weak self] in
             self?.enlargeTrackImageView()
-
+            
         }
     }
     
@@ -147,11 +156,13 @@ class TrackDetailView: UIView {
     @IBAction func playPauseAction(_ sender: Any) {
         if player.timeControlStatus == .paused {
             player.play()
-            playPauseButton.setImage(#imageLiteral(resourceName: "Pause"), for: .normal)
+            playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+            miniPlayButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
             enlargeTrackImageView()
         } else {
             player.pause()
-            playPauseButton.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+            playPauseButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+            miniPlayButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
             reduceTrackImageView()
         }
     }
