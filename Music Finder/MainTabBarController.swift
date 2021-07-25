@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 protocol MainTabBarControllerDelegate: AnyObject {
     func minimiseTrackDetailController()
@@ -29,9 +30,14 @@ class MainTabBarController: UITabBarController {
         setupTrackDetailView()
         searchVC.tabBarDelegate = self
         
+        let library = Library()
+        let hostVC = UIHostingController(rootView: library)
+        hostVC.tabBarItem.image = #imageLiteral(resourceName: "ios10-apple-music-library-5nav-icon")
+        hostVC.tabBarItem.title = "Library"
+        
         viewControllers = [
-            generateViewController(rootViewController: searchVC, image: #imageLiteral(resourceName: "ios10-apple-music-search-5nav-icon"), title: "Search"),
-            generateViewController(rootViewController: LibraryViewController(), image: #imageLiteral(resourceName: "ios10-apple-music-library-5nav-icon"), title: "Library")
+            hostVC,
+            generateViewController(rootViewController: searchVC, image: #imageLiteral(resourceName: "ios10-apple-music-search-5nav-icon"), title: "Search")
         ]
     }
     
