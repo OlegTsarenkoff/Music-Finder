@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		24523CCE26AD5EDD00351398 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24523CCD26AD5EDD00351398 /* Library.swift */; };
+		24523CD026AE8DA900351398 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24523CCF26AE8DA900351398 /* UserDefaults.swift */; };
+		24523CD326AF056700351398 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 24523CD226AF056700351398 /* URLImageStore */; };
+		24523CD526AF056700351398 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24523CD426AF056700351398 /* URLImage */; };
 		245A520E26A5A1AF007C30AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A520D26A5A1AF007C30AA /* AppDelegate.swift */; };
 		245A521026A5A1AF007C30AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A520F26A5A1AF007C30AA /* SceneDelegate.swift */; };
 		245A521226A5A1AF007C30AA /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A521126A5A1AF007C30AA /* LibraryViewController.swift */; };
@@ -39,6 +42,7 @@
 /* Begin PBXFileReference section */
 		0617E66B9B4F7195EBC11B34 /* Pods-Music Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Finder.debug.xcconfig"; path = "Target Support Files/Pods-Music Finder/Pods-Music Finder.debug.xcconfig"; sourceTree = "<group>"; };
 		24523CCD26AD5EDD00351398 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		24523CCF26AE8DA900351398 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		245A520A26A5A1AF007C30AA /* Music Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		245A520D26A5A1AF007C30AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		245A520F26A5A1AF007C30AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24523CD326AF056700351398 /* URLImageStore in Frameworks */,
+				24523CD526AF056700351398 /* URLImage in Frameworks */,
 				7029F75174A8769409461DA0 /* Pods_Music_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +167,7 @@
 			children = (
 				245A524D26A6CCD6007C30AA /* TrackCell.xib */,
 				245A524F26A6CCFD007C30AA /* TrackCell.swift */,
+				24523CCF26AE8DA900351398 /* UserDefaults.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -225,6 +232,10 @@
 			dependencies = (
 			);
 			name = "Music Finder";
+			packageProductDependencies = (
+				24523CD226AF056700351398 /* URLImageStore */,
+				24523CD426AF056700351398 /* URLImage */,
+			);
 			productName = "Music Finder";
 			productReference = 245A520A26A5A1AF007C30AA /* Music Finder.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +263,9 @@
 				Base,
 			);
 			mainGroup = 245A520126A5A1AF007C30AA;
+			packageReferences = (
+				24523CD126AF056700351398 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 245A520B26A5A1AF007C30AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -329,6 +343,7 @@
 				245A524A26A5D5E6007C30AA /* UIViewController + Storyboard.swift in Sources */,
 				245A522426A5A320007C30AA /* SearchMusicViewController.swift in Sources */,
 				245A521226A5A1AF007C30AA /* LibraryViewController.swift in Sources */,
+				24523CD026AE8DA900351398 /* UserDefaults.swift in Sources */,
 				245A524526A5CCBB007C30AA /* SearchInteractor.swift in Sources */,
 				245A525426A6EE1C007C30AA /* FooterView.swift in Sources */,
 				245A525026A6CCFD007C30AA /* TrackCell.swift in Sources */,
@@ -547,6 +562,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		24523CD126AF056700351398 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24523CD226AF056700351398 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24523CD126AF056700351398 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		24523CD426AF056700351398 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24523CD126AF056700351398 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 245A520226A5A1AF007C30AA /* Project object */;
 }
