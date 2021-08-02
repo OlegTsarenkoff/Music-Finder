@@ -36,7 +36,7 @@
 		245A525926A6F538007C30AA /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A525826A6F538007C30AA /* TrackDetailView.swift */; };
 		247F01D426A81A6A00EC39E0 /* SMTime + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247F01D326A81A6A00EC39E0 /* SMTime + Extention.swift */; };
 		247F01D626A8619A00EC39E0 /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247F01D526A8619A00EC39E0 /* Nib.swift */; };
-		7029F75174A8769409461DA0 /* Pods_Music_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F676656C6C91C7D4841E88 /* Pods_Music_Finder.framework */; };
+		24F5695E26B7D3B200EB8ABA /* Pods_Music_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F676656C6C91C7D4841E88 /* Pods_Music_Finder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +81,7 @@
 			files = (
 				24523CD326AF056700351398 /* URLImageStore in Frameworks */,
 				24523CD526AF056700351398 /* URLImage in Frameworks */,
-				7029F75174A8769409461DA0 /* Pods_Music_Finder.framework in Frameworks */,
+				24F5695E26B7D3B200EB8ABA /* Pods_Music_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
